@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EDMFX · Emilio Martín</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<style>
+html,body{margin:0;padding:0;background:#04060e;}
+body{font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+html,body{scrollbar-width:none;-ms-overflow-style:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{display:none}
+*{box-sizing:border-box;}
+a{color:#8fa4ff;text-decoration:none;}
+a:hover{color:#c4d0ff;}
+::selection{background:rgba(43,75,240,.45);color:#fff;}
+@keyframes sheen{0%{transform:translateX(-120%) rotate(8deg)}100%{transform:translateX(220%) rotate(8deg)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes tick{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+</style>
+</helmet>
+<div data-screen-label="Landing" style="position:relative;min-height:100vh;background:
+  radial-gradient(120% 70% at 50% -10%, #16215c 0%, rgba(10,16,48,0) 62%),
+  radial-gradient(90% 55% at 88% 42%, rgba(35,56,214,.20) 0%, rgba(4,6,14,0) 70%),
+  radial-gradient(80% 50% at 6% 88%, rgba(20,32,120,.28) 0%, rgba(4,6,14,0) 70%),
+  linear-gradient(180deg,#060a1a 0%,#04060e 55%,#04060e 100%);
+  color:#eaeefb;overflow:hidden;">
+
+  <div style="position:absolute;inset:0;pointer-events:none;opacity:.35;background-image:linear-gradient(rgba(140,165,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(140,165,255,.055) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(120% 80% at 50% 0%,#000 20%,transparent 78%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%,#000 20%,transparent 78%);"></div>
+
+  <header style="position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:center;gap:12px;padding:11px clamp(16px,5vw,34px);background:rgba(4,6,14,.62);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid rgba(140,165,255,.10);">
+    <div style="display:flex;align-items:center;gap:9px;">
+      <img src="assets/logo.png" alt="" style="height:26px;width:auto;display:block;opacity:.95;">
+    </div>
+  </header>
+
+  <main style="position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:clamp(24px,5vw,72px);padding:0 clamp(16px,5vw,40px) 0;max-width:1180px;margin:0 auto;">
+
+    <section style="flex:1 1 330px;max-width:520px;display:flex;flex-direction:column;align-items:center;margin-top:-16px;">
+      <div data-assembly="" style="display:flex;flex-direction:column;align-items:center;transform-origin:50% 0%;will-change:transform;">
+        <img src="assets/lanyard-front.png?v=4" alt="" style="position:relative;z-index:3;display:block;transition:transform .8s cubic-bezier(.3,.7,.2,1);transform:perspective(1400px) {{ cardTransform }};width:170px;height:auto;margin-top:-39.07px;pointer-events:none;-webkit-mask-image:linear-gradient(#000,#000),linear-gradient(#000,#000);mask-image:linear-gradient(#000,#000),linear-gradient(#000,#000);-webkit-mask-size:100% calc(100% - 20px),36px 10px;mask-size:100% calc(100% - 20px),36px 10px;-webkit-mask-position:0 0,center bottom 10px;mask-position:0 0,center bottom 10px;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;">
+        <div onClick="{{ flip }}" role="button" aria-label="Girar tarjeta" style="position:relative;z-index:2;margin-top:-32.5px;width:clamp(266px,74vw,332px);border-radius:20px;cursor:pointer;perspective:1400px;-webkit-tap-highlight-color:transparent;box-shadow:0 3px 0 rgba(3,5,14,.9),0 30px 60px -18px rgba(0,0,0,.85),0 60px 90px -30px rgba(24,40,150,.45);">
+        <div style="position:relative;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.3,.7,.2,1);transform:{{ cardTransform }};">
+        <div data-card="" style="position:relative;width:100%;aspect-ratio:.74;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:20px;padding:clamp(15px,4.4vw,19px);display:flex;flex-direction:column;
+          background:linear-gradient(157deg,#39408f 0%,#232a7a 20%,#141a5e 48%,#0d1147 74%,#1c2270 100%);
+          border:1px solid rgba(255,255,255,.16);
+          box-shadow:0 1px 0 rgba(255,255,255,.22) inset;
+          overflow:hidden;"
+          style-before="content:'';position:absolute;inset:0;border-radius:inherit;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>&quot;);opacity:.16;mix-blend-mode:overlay;pointer-events:none"
+          style-after="content:'';position:absolute;top:-40%;left:0;width:46%;height:180%;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.13) 45%,rgba(255,255,255,.02) 100%);filter:blur(6px);pointer-events:none;animation:sheen 9s cubic-bezier(.5,0,.5,1) infinite">
+
+
+          <div style="position:absolute;top:12.5px;left:50%;transform:translateX(-50%);width:36px;height:10px;border-radius:5px;background:linear-gradient(180deg,#04060f,#0b1233);box-shadow:0 1px 0 rgba(255,255,255,.22),0 -1px 2px rgba(0,0,0,.85) inset,0 2px 5px rgba(0,0,0,.7) inset;"></div>
+
+          <img src="assets/logo.png" alt="" style="position:absolute;top:24%;left:-14%;width:136%;height:auto;opacity:.19;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 26%,rgba(0,0,0,.5) 64%,rgba(0,0,0,0) 96%);mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 26%,rgba(0,0,0,.5) 64%,rgba(0,0,0,0) 96%);">
+          <div style="position:absolute;top:0;right:13px;bottom:0;display:flex;align-items:center;pointer-events:none;">
+            <span style="writing-mode:vertical-rl;font-size:6.5px;font-weight:600;letter-spacing:.42em;color:rgba(214,225,255,.34);">MARKET ACCESS &nbsp;·&nbsp; MEMBER &nbsp;·&nbsp; EST. 2024</span>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-top:34px;position:relative;">
+            <img src="assets/logo.png" alt="" style="height:clamp(24px,6.6vw,30px);width:auto;display:block;filter:drop-shadow(0 1px 1px rgba(0,0,0,.5));">
+            <div style="text-align:right;padding-right:14px;">
+              <div style="font-size:6.5px;font-weight:600;letter-spacing:.3em;color:rgba(200,214,255,.5);">ACCREDITATION</div>
+              <div style="font-size:8.5px;font-weight:700;letter-spacing:.14em;color:#dfe7ff;margin-top:3px;font-variant-numeric:tabular-nums;">ID · 0417</div>
+            </div>
+          </div>
+
+          <div style="flex:1;"></div>
+
+          <div style="position:relative;padding-right:16px;">
+            <div style="font-size:clamp(26px,7.8vw,33px);font-weight:800;letter-spacing:-.015em;line-height:.97;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.35);">EMILIO<br>MARTÍN</div>
+            <div style="height:1px;background:linear-gradient(90deg,rgba(255,255,255,.42),rgba(255,255,255,.06));margin:13px 0 10px;"></div>
+            <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:8px;">
+              <span style="font-size:6.5px;font-weight:600;letter-spacing:.28em;color:rgba(198,212,255,.55);">POSITION</span>
+              <span style="font-size:clamp(10.5px,3.1vw,12px);font-weight:700;letter-spacing:.12em;color:#e7ecff;text-align:right;line-height:1.25;">FOREX TRADER</span>
+            </div>
+            <div style="height:1px;background:linear-gradient(90deg,rgba(255,255,255,.28),rgba(255,255,255,.04));margin:10px 0 0;"></div>
+          </div>
+
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:11px;padding-right:16px;">
+            <span style="font-size:6px;font-weight:600;letter-spacing:.26em;color:rgba(198,212,255,.34);">TITULAR AUTORIZADO</span>
+            <span style="font-size:6px;font-weight:600;letter-spacing:.26em;color:rgba(198,212,255,.34);">NO TRANSFERIBLE</span>
+          </div>
+        </div>
+        <div style="position:absolute;inset:0;border-radius:20px;padding:clamp(15px,4.4vw,19px);display:flex;flex-direction:column;transform:rotateY(180deg);-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;background:linear-gradient(203deg,#39408f 0%,#232a7a 20%,#141a5e 48%,#0d1147 74%,#1c2270 100%);border:1px solid rgba(255,255,255,.16);box-shadow:0 1px 0 rgba(255,255,255,.22) inset;">
+          <div style="position:absolute;top:12.5px;left:50%;transform:translateX(-50%);width:36px;height:10px;border-radius:5px;background:linear-gradient(180deg,#04060f,#0b1233);box-shadow:0 1px 0 rgba(255,255,255,.22),0 -1px 2px rgba(0,0,0,.85) inset,0 2px 5px rgba(0,0,0,.7) inset;"></div>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-top:34px;">
+            <span style="font-size:6.5px;font-weight:600;letter-spacing:.3em;color:rgba(200,214,255,.5);">PROFILE</span>
+            <span style="font-size:8.5px;font-weight:700;letter-spacing:.14em;color:#dfe7ff;font-variant-numeric:tabular-nums;">ID · 0417</span>
+          </div>
+          <div style="height:1px;background:linear-gradient(90deg,rgba(255,255,255,.42),rgba(255,255,255,.06));margin:12px 0 0;"></div>
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:12px;">
+            <p style="margin:0;font-size:clamp(15px,4.6vw,18px);font-weight:700;line-height:1.3;color:#fff;text-wrap:pretty;">Soy trader especializado en XAUUSD</p>
+            <p style="margin:0;font-size:clamp(12px,3.6vw,13.5px);font-weight:500;line-height:1.6;color:#c3cdee;text-wrap:pretty;">También opero divisas y criptomonedas. Comparto análisis, zonas y operativa en tiempo real de forma gratuita para que operes con un plan y estrategia.</p>
+          </div>
+          <div style="height:1px;background:linear-gradient(90deg,rgba(255,255,255,.28),rgba(255,255,255,.04));"></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:11px;">
+            <img src="assets/logo.png" alt="" style="height:16px;width:auto;display:block;opacity:.85;">
+            <span style="font-size:6px;font-weight:600;letter-spacing:.26em;color:rgba(198,212,255,.45);">EMILIO MARTÍN · FOREX TRADER</span>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+
+      <div data-reveal="" style="position:relative;z-index:6;margin-top:clamp(40px,9vw,56px);text-align:center;max-width:340px;">
+        <div style="font-size:9px;font-weight:600;letter-spacing:.32em;color:#5f6b95;">TRADER · MARKET ACCESS</div>
+        <p style="margin:12px 0 0;font-size:13.5px;line-height:1.65;color:#98a3c6;text-wrap:pretty;">Comunidad Gratuita. Señales + tips diarios.</p>
+        <div style="margin-top:14px;font-size:8.5px;font-weight:600;letter-spacing:.28em;color:#4f5a84;">TOCA LA TARJETA PARA GIRARLA</div>
+      </div>
+    </section>
+
+    <section style="flex:1 1 320px;max-width:460px;width:100%;padding:clamp(30px,7vw,54px) 0 clamp(50px,9vw,80px);display:flex;flex-direction:column;gap:clamp(28px,6vw,44px);">
+
+      <div data-reveal="">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px;">
+          <span style="font-size:9.5px;font-weight:700;letter-spacing:.3em;color:#8b97c0;white-space:nowrap;">MARKET DATA</span>
+          <span style="font-size:8.5px;font-weight:500;letter-spacing:.14em;color:{{ feedColor }};font-variant-numeric:tabular-nums;white-space:nowrap;">{{ feedStatus }}</span>
+        </div>
+        <div style="border:1px solid rgba(140,165,255,.13);border-radius:14px;background:linear-gradient(180deg,rgba(20,30,78,.55),rgba(8,12,32,.55));backdrop-filter:blur(6px);overflow:hidden;">
+          <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="3">
+            <div style="display:flex;align-items:center;gap:12px;padding:{{ q.pad }};border-top:1px solid rgba(140,165,255,.09);background:{{ q.rowBg }};">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:7px;">
+                  <span style="font-size:{{ q.symSize }};font-weight:700;letter-spacing:.14em;color:#eef2ff;">{{ q.label }}</span>
+                  <span style="font-size:7px;font-weight:600;letter-spacing:.2em;color:#6b7aa8;">{{ q.tag }}</span>
+                </div>
+                <div style="font-size:7.5px;font-weight:500;letter-spacing:.2em;color:#5e6a94;margin-top:3px;">{{ q.name }}</div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-size:{{ q.priceSize }};font-weight:700;letter-spacing:.01em;color:#fff;font-variant-numeric:tabular-nums;">{{ q.price }}</div>
+                <div style="font-size:9px;font-weight:600;letter-spacing:.06em;color:{{ q.color }};font-variant-numeric:tabular-nums;margin-top:2px;">{{ q.change }}</div>
+              </div>
+            </div>
+          </sc-for>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 14px;border-top:1px solid rgba(140,165,255,.09);background:rgba(4,6,16,.5);">
+            <span style="font-size:7.5px;font-weight:600;letter-spacing:.22em;color:#4f5a80;white-space:nowrap;">LAST UPDATE</span>
+            <span style="font-size:7.5px;font-weight:600;letter-spacing:.16em;color:#6c78a4;font-variant-numeric:tabular-nums;white-space:nowrap;">{{ lastUpdate }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px;">
+          <span style="font-size:9.5px;font-weight:700;letter-spacing:.3em;color:#8b97c0;">CONNECT</span>
+          <span style="font-size:8.5px;font-weight:500;letter-spacing:.14em;color:#4f5a80;white-space:nowrap;">04 CANALES</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+
+          <a href="https://t.me/+TBGWHDWud60yZDg0" target="_blank" rel="noopener" style="grid-column:span 2;position:relative;display:flex;align-items:center;gap:14px;padding:18px;border-radius:18px;overflow:hidden;text-decoration:none;color:#eef2ff;border:1px solid rgba(150,175,255,.22);background:linear-gradient(135deg,#2c3ad0 0%,#1d2699 42%,#111a63 100%);box-shadow:0 18px 34px -16px rgba(30,50,190,.75),0 1px 0 rgba(255,255,255,.2) inset;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s;" style-hover="transform:translateY(-3px);box-shadow:0 26px 46px -16px rgba(40,64,220,.9),0 1px 0 rgba(255,255,255,.28) inset" style-active="transform:translateY(-1px) scale(.995)">
+            <span style="position:absolute;inset:0;background:radial-gradient(80% 120% at 88% 0%,rgba(255,255,255,.22),transparent 60%);pointer-events:none;"></span>
+            <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);">
+              <svg viewBox="0 0 24 24" fill="#fff" style="width:22px;height:22px;"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.230-.696.065-1.226-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.26-1.91.176-.184 3.247-2.977 3.307-3.230.005-.03.01-.14-.052-.198-.062-.06-.153-.04-.219-.023-.093.02-1.582 1.006-4.472 2.958-.423.29-.806.434-1.15.427-.375-.007-1.096-.213-1.633-.39-.652-.211-1.17-.325-1.15-.686.01-.187.264-.379.76-.575 2.968-1.292 4.94-2.145 5.92-2.556 2.827-1.183 3.415-1.388 3.798-1.394z"></path></svg>
+            </span>
+            <span style="flex:1;min-width:0;">
+              <span style="display:block;font-size:15px;font-weight:700;letter-spacing:.14em;">TELEGRAM</span>
+              <span style="display:block;font-size:11px;font-weight:500;letter-spacing:.02em;color:rgba(226,234,255,.75);margin-top:3px;">Comunidad Gratuita · Señales diarias</span>
+            </span>
+            <span style="flex:none;display:flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;background:#fff;color:#141c5c;font-size:9.5px;font-weight:700;letter-spacing:.18em;white-space:nowrap;">UNIRME</span>
+          </a>
+
+          <a href="https://wa.me/34609835190" target="_blank" rel="noopener" style="grid-row:span 2;position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:14px;padding:16px;border-radius:18px;overflow:hidden;text-decoration:none;color:#eef2ff;min-height:186px;border:1px solid rgba(140,165,255,.16);background:linear-gradient(165deg,rgba(30,42,110,.85) 0%,rgba(12,18,52,.9) 60%,rgba(20,28,84,.9) 100%);box-shadow:0 14px 30px -18px rgba(0,0,0,.9);transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s;" style-hover="transform:translateY(-3px);border-color:rgba(160,185,255,.4)" style-active="transform:translateY(-1px) scale(.995)">
+            <span style="position:absolute;inset:0;background:radial-gradient(70% 60% at 20% 0%,rgba(120,150,255,.22),transparent 65%);pointer-events:none;"></span>
+            <span style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);">
+              <svg viewBox="0 0 24 24" fill="#dce4ff" style="width:19px;height:19px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.480-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.347-.347.52-.52.174-.174.232-.298.347-.497.115-.198.057-.371-.025-.52-.082-.148-.669-1.612-.916-2.207-.244-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.040 1.016-1.040 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 0 0-3.480-8.413Z"></path></svg>
+            </span>
+            <span>
+              <span style="display:block;font-size:14px;font-weight:700;letter-spacing:.14em;">WHATSAPP</span>
+              <span style="display:block;font-size:10.5px;font-weight:500;color:#93a0c8;margin-top:4px;font-variant-numeric:tabular-nums;">+34 609 835 190</span>
+              <span style="display:block;font-size:10px;font-weight:500;color:#7d8ab4;margin-top:3px;">Soporte y acceso al VIP</span>
+              <span style="display:inline-flex;align-items:center;gap:7px;margin-top:14px;padding:8px 12px;border-radius:999px;border:1px solid rgba(160,185,255,.3);font-size:9px;font-weight:700;letter-spacing:.18em;color:#d6e0ff;">CONTACTAR <span style="font-size:11px;">↗</span></span>
+            </span>
+          </a>
+
+          <a href="https://www.instagram.com/emiliomartinn_fx/" target="_blank" rel="noopener" style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:14px;border-radius:18px;overflow:hidden;text-decoration:none;color:#eef2ff;min-height:88px;border:1px solid rgba(140,165,255,.16);background:linear-gradient(150deg,rgba(24,34,92,.8),rgba(9,13,38,.9));box-shadow:0 12px 26px -18px rgba(0,0,0,.9);transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s;" style-hover="transform:translateY(-3px);border-color:rgba(160,185,255,.4)" style-active="transform:translateY(-1px) scale(.99)">
+            <span style="display:flex;align-items:center;justify-content:space-between;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#dce4ff" stroke-width="1.5" stroke-linecap="round" style="width:18px;height:18px;"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r=".9" fill="#dce4ff" stroke="none"></circle></svg>
+              <span style="font-size:11px;color:#8492bd;">↗</span>
+            </span>
+            <span>
+              <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.13em;">INSTAGRAM</span>
+              <span style="display:block;font-size:9.5px;font-weight:500;color:#8b98c2;margin-top:3px;">@emiliomartinn_fx</span>
+            </span>
+          </a>
+
+          <a href="https://www.tiktok.com/@emiliomartinn_fx" target="_blank" rel="noopener" style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:14px;border-radius:18px;overflow:hidden;text-decoration:none;color:#eef2ff;min-height:88px;border:1px solid rgba(140,165,255,.16);background:linear-gradient(150deg,rgba(18,26,74,.8),rgba(7,10,30,.92));box-shadow:0 12px 26px -18px rgba(0,0,0,.9);transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s;" style-hover="transform:translateY(-3px);border-color:rgba(160,185,255,.4)" style-active="transform:translateY(-1px) scale(.99)">
+            <span style="display:flex;align-items:center;justify-content:space-between;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#dce4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M14.5 3v10.6a3.6 3.6 0 1 1-3.6-3.6"></path><path d="M14.5 3.4c.5 2.6 2.4 4.3 5 4.5"></path></svg>
+              <span style="font-size:11px;color:#8492bd;">↗</span>
+            </span>
+            <span>
+              <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.13em;">TIKTOK</span>
+              <span style="display:block;font-size:9.5px;font-weight:500;color:#8b98c2;margin-top:3px;">@emiliomartinn_fx</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div data-reveal="" style="display:flex;align-items:center;justify-content:center;padding-top:18px;border-top:1px solid rgba(140,165,255,.10);">
+        <span style="font-size:10px;font-weight:700;letter-spacing:.34em;color:#49537a;">EDMFX</span>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:430,&quot;height&quot;:932},&quot;apiKey&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;a45fab4ed20e4092bebfb9dd3bd3130c&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Market data&quot;},&quot;refreshSeconds&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:300,&quot;min&quot;:15,&quot;max&quot;:600,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Market data&quot;},&quot;sway&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Movimiento&quot;}}">
+const SYMBOLS = [
+  { key: 'XAU/USD', src: 'td', label: 'XAUUSD', name: 'GOLD SPOT · USD', tag: 'CORE', hero: true, dec: 2 },
+  { key: 'BTC/USD', src: 'binance', label: 'BTC/USD', name: 'BITCOIN · USD', tag: '', hero: false, dec: 2 },
+  { key: 'QQQ', src: 'td', label: 'NASDAQ', name: 'NASDAQ-100 · QQQ', tag: '', hero: false, dec: 2 }
+];
+
+class Component extends DCLogic {
+  state = { data: {}, clock: '--:--:--', lastUpdate: '—', feed: 'init', flipped: false, hookBack: false };
+  flip = () => {
+    const f = !this.state.flipped;
+    this.setState({ flipped: f });
+  };
+
+  componentDidMount() {
+    this.tick();
+    this._clock = setInterval(() => this.tick(), 1000);
+    this.load();
+    const qs = new URLSearchParams(location.search);
+    const secs = Math.max(15, Number(qs.get('refreshSeconds')) || this.props.refreshSeconds || 300);
+    this._poll = setInterval(() => this.load(), secs * 1000);
+    this.initSway();
+  }
+  componentWillUnmount() {
+    clearInterval(this._clock); clearInterval(this._poll);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._raf) cancelAnimationFrame(this._raf);
+  }
+
+  tick() {
+    const d = new Date();
+    const p = n => String(n).padStart(2, '0');
+    this.setState({ clock: p(d.getUTCHours()) + ':' + p(d.getUTCMinutes()) + ':' + p(d.getUTCSeconds()) });
+  }
+
+  // ---- Market data -------------------------------------------------
+  // Pega tu API key de Twelve Data (twelvedata.com, plan gratuito) en el
+  // prop `apiKey` desde el panel de Tweaks, o sustituye FALLBACK_KEY aquí.
+  // Sin key: se intenta BTC vía el endpoint público de Binance y el resto
+  // queda en estado SIN CONEXIÓN. Nunca se muestran datos simulados.
+  async load() {
+    const q = new URLSearchParams(location.search);
+    const key = (q.get('apiKey') || this.props.apiKey || 'a45fab4ed20e4092bebfb9dd3bd3130c').trim();
+    const secs = Math.max(15, Number(q.get('refreshSeconds')) || this.props.refreshSeconds || 300);
+    const prev = this.state.data || {};
+    const next = {};
+    let tdErr = null;
+    const TD = SYMBOLS.filter(s => s.src === 'td');
+    if (!key) tdErr = 'nokey';
+    else {
+      let cache = null;
+      try { cache = JSON.parse(localStorage.getItem('edmfx-td-cache') || 'null'); } catch (e) {}
+      if (cache && Date.now() - cache.t < secs * 1000 && cache.d) Object.assign(next, cache.d);
+      else {
+        try {
+          const r = await fetch('https://api.twelvedata.com/quote?symbol=' + encodeURIComponent(TD.map(s => s.key).join(',')) + '&apikey=' + encodeURIComponent(key));
+          const j = await r.json();
+          if (j && j.status === 'error') tdErr = j.code === 429 ? 'limited' : 'error';
+          const got = {};
+          TD.forEach(s => {
+            const it = j[s.key] || (TD.length === 1 && j.symbol ? j : null);
+            if (it && it.status === 'error') tdErr = tdErr || (it.code === 429 ? 'limited' : 'error');
+            if (it && it.close) got[s.key] = { price: parseFloat(it.close), pct: parseFloat(it.percent_change) };
+          });
+          if (Object.keys(got).length) { Object.assign(next, got); try { localStorage.setItem('edmfx-td-cache', JSON.stringify({ t: Date.now(), d: got })); } catch (e) {} }
+        } catch (e) { tdErr = 'error'; }
+      }
+      TD.forEach(s => { if (!next[s.key] && prev[s.key]) next[s.key] = prev[s.key]; });
+    }
+    try {
+      const r = await fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT');
+      const j = await r.json();
+      if (j && j.lastPrice) next['BTC/USD'] = { price: parseFloat(j.lastPrice), pct: parseFloat(j.priceChangePercent) };
+    } catch (e) {}
+    if (!next['BTC/USD'] && prev['BTC/USD']) next['BTC/USD'] = prev['BTC/USD'];
+    const ok = SYMBOLS.filter(s => next[s.key]).length;
+    const d = new Date(); const p = n => String(n).padStart(2, '0');
+    this.setState({
+      data: next,
+      feed: ok === SYMBOLS.length ? 'live' : ok === 0 ? 'off' : (tdErr || 'partial'),
+      lastUpdate: ok ? p(d.getUTCHours()) + ':' + p(d.getUTCMinutes()) + ':' + p(d.getUTCSeconds()) + ' UTC' : 'SIN DATOS'
+    });
+  }
+
+  // ---- Lanyard sway ------------------------------------------------
+  initSway() {
+    const el = this.el && this.el.querySelector ? this.el.querySelector('[data-assembly]') : document.querySelector('[data-assembly]');
+    if (!el || this.props.sway === false || new URLSearchParams(location.search).get('sway') === 'false') return;
+    let last = window.scrollY, vel = 0, angle = 0, av = 0;
+    this._onScroll = () => { const y = window.scrollY; vel += (y - last) * 0.055; last = y; };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    const frame = () => {
+      const target = Math.max(-4.2, Math.min(4.2, vel));
+      av += (target - angle) * 0.055; av *= 0.90; angle += av;
+      vel *= 0.86;
+      const drift = Math.min(window.scrollY * 0.04, 14);
+      el.style.transform = 'translateY(' + drift.toFixed(2) + 'px) rotate(' + angle.toFixed(3) + 'deg)';
+      this._raf = requestAnimationFrame(frame);
+    };
+    this._raf = requestAnimationFrame(frame);
+  }
+
+  marketStatus() {
+    const d = new Date(), day = d.getUTCDay(), t = d.getUTCHours() * 60 + d.getUTCMinutes();
+    if (day === 0 || day === 6) return ['MERCADO CERRADO', '#8a93b5'];
+    if (t >= 810 && t < 1200) return ['MERCADO ABIERTO', '#4ee39a'];
+    return ['FUERA DE SESIÓN', '#e6b45a'];
+  }
+
+  renderVals() {
+    const [marketStatus, statusColor] = this.marketStatus();
+    const quotes = SYMBOLS.map(s => {
+      const q = this.state.data[s.key];
+      const up = q && q.pct >= 0;
+      return {
+        label: s.label, name: s.name, tag: s.hero ? 'CORE' : s.tag,
+        price: q ? q.price.toLocaleString('en-US', { minimumFractionDigits: s.dec, maximumFractionDigits: s.dec }) : '—',
+        change: q ? (up ? '+' : '') + q.pct.toFixed(2) + '%' : '· · ·',
+        color: !q ? '#5a6489' : up ? '#4ee39a' : '#ff7a7a',
+        pad: s.hero ? '17px 15px' : '13px 15px',
+        symSize: s.hero ? '13px' : '11px',
+        priceSize: s.hero ? '19px' : '14.5px',
+        rowBg: s.hero ? 'linear-gradient(90deg,rgba(43,72,220,.22),rgba(43,72,220,.02))' : 'transparent'
+      };
+    });
+    const feedMap = {
+      init: ['CONECTANDO…', '#6c78a4'],
+      live: ['● EN VIVO', '#4ee39a'],
+      partial: ['● PARCIAL', '#e6b45a'],
+      nokey: ['● PARCIAL · FALTA API KEY', '#e6b45a'],
+      limited: ['● PARCIAL · LÍMITE DE API', '#e6b45a'],
+      error: ['● PARCIAL · ERROR DE API', '#e6b45a'],
+      off: ['○ SIN CONEXIÓN', '#8a93b5']
+    };
+    const [feedStatus, feedColor] = feedMap[this.state.feed] || feedMap.off;
+    return { flip: this.flip, cardTransform: this.state.flipped ? 'rotateY(180deg)' : 'rotateY(0deg)', hookSrc: this.state.hookBack ? 'assets/lanyard-back.png?v=4' : 'assets/lanyard-front.png?v=4', quotes, clock: this.state.clock, lastUpdate: this.state.lastUpdate, marketStatus, statusColor, feedStatus, feedColor };
+  }
+}
+</script>
+</body>
+</html>
